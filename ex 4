@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+void parOuImpar(int num) {
+    if (num % 2 == 0)
+        printf("%d é par\n", num);
+    else
+        printf("%d é ímpar\n", num);
+}
+
+int main() {
+    int n;
+    scanf("%d", &n);
+    parOuImpar(n);
+    return 0;
+}
