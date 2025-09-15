@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+void exibirConceito(float nota) {
+    if (nota <= 39)
+        printf("Nota %.2f: Conceito F\n", nota);
+    else if (nota <= 59)
+        printf("Nota %.2f: Conceito E\n", nota);
+    else if (nota <= 69)
+        printf("Nota %.2f: Conceito D\n", nota);
+    else if (nota <= 79)
+        printf("Nota %.2f: Conceito C\n", nota);
+    else if (nota <= 89)
+        printf("Nota %.2f: Conceito B\n", nota);
+    else
+        printf("Nota %.2f: Conceito A\n", nota);
+}
+
+int main() {
+    int N, i;
+    float nota;
+
+    printf("Digite o numero de alunos: ");
+    scanf("%d", &N);
+
+    for (i = 1; i <= N; i++) {
+        printf("Digite a nota do aluno %d: ", i);
+        scanf("%f", &nota);
+        exibirConceito(nota);
+    }
+
+    return 0;
+}
